@@ -1,11 +1,12 @@
 const express = require('express')
 const app = express()
-require('dotenv').config()
+const dotenv = require("dotenv").config()
 const morgan = require('morgan')
 const mongoose = require('mongoose')
 const expressJwt = require("express-jwt")
-const path = require("path")
 const port = process.env.PORT || 7000;
+const path = require("path")
+
 
 
 app.use(express.json())
