@@ -37,7 +37,7 @@ function Auth() {
             <h1 className="title">Welcome to Eraser Time!</h1>
 
             {!toggle?
-            <>
+            <div className="authformwrapper">
                 <AuthForm 
                     handleChange={handleChange}
                     handleSubmit = {handleSignup}
@@ -45,10 +45,10 @@ function Auth() {
                     btnText="Sign up"
                 />
                 <p style={{color: "red"}}>{errMsg}</p>
-                <p onClick={()=>setToggle(prev => !prev)}>Already a member?</p>
-            </>
+                <button className="authformbutton" onClick={()=>setToggle(prev => !prev)}>Already a member?</button>
+            </div>
             :
-            <>
+            <div className="authformwrapper">
                 <AuthForm 
                     handleChange={handleChange}
                     handleSubmit = {handleLogin}
@@ -56,8 +56,8 @@ function Auth() {
                     btnText="Login"
                 />
                 <p style={{color: "red"}}>{errMsg}</p>
-                <p onClick={()=>setToggle(prev => !prev)}>Not a member?</p>
-            </>
+                <button className="authformbutton" onClick={()=>setToggle(prev => !prev)}>Not a member?</button>
+            </div>
             }
         </>
     )

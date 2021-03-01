@@ -26,7 +26,7 @@ function PostForm(props) {
     const { title, caption, imgUrl } = inputs
     
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="postform authform" onSubmit={handleSubmit}>
             <input 
             type="text" 
             name="title" 
@@ -45,7 +45,7 @@ function PostForm(props) {
             value={imgUrl} 
             onChange={handleChange} 
             placeholder="Image Url"/>
-            <button>Add Post</button>
+            <button className="authformbutton">Add Post</button>
         </form>
     )
 }

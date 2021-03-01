@@ -92,15 +92,15 @@ function PublicPost(props) {
 
             :
 
-            <div className="post">
-                <form onSubmit={addComment}>
-                    <input 
+            <div className="post commenting">
+                <form className="commentform" onSubmit={addComment}>
+                    <input
                     type="text" 
                     name="comment" 
                     value={postObj.comment} 
                     onChange={handleChange} 
                     placeholder="Type Your Comment Here"/>
-                    <button>Add Comment</button>
+                    <button style={{marginTop: "0px", padding: "0px"}} className="authformbutton">Add Comment</button>
                 </form>
                 {comments.map(comment => <Comment {...comment} deleteComment={deleteComment}/>)}
                 <br />

@@ -32,7 +32,7 @@ function User(props) {
     return (
         !isLoading?
         <div className="userCard">
-            <h1>{username}'s Posts</h1>
+            <h1 className="publicuser">{username}'s Posts</h1>
             {posts.map(post => <PublicPost {...post}/>)}
         </div>:
         null

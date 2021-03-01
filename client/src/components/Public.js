@@ -31,7 +31,7 @@ function Public() {
     
     return (
         <div className="publicPostsHolder">
-            {isLoading?<h1>loading...</h1>:users.map(user => <User {...user}/>)}
+            {isLoading?<h1 style={{fontWeight: 400}}>loading...</h1>:users.map(user => <User {...user}/>)}
         </div>
     )
 

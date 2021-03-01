@@ -11,7 +11,7 @@ function AuthForm(props) {
         btnText
     } = props
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="authform">
         <input 
           type="text" 
           name="username" 

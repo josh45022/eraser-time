@@ -19,8 +19,8 @@ function Profile() {
     useEffect(getUserPosts, [])
     return (
         <>
-        <h1 style={{marginTop: "30px"}}>Ready to go {username}?</h1>
-            <button className="logout" onClick={logout}>
+        <h1 className="publicuser" style={{marginTop: "30px"}}>Ready to go {username}?</h1>
+            <button className="authformbutton logout" onClick={logout}>
                 <Link to="/">
                 Log Out
                 </Link>
